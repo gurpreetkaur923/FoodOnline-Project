@@ -1,0 +1,27 @@
+@keyframes show-toast {
+    0% { 
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    20% { 
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    80% { 
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    100% { 
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+}
+
+.show-notificaton {
+    position: fixed;
+    top: 30%;
+    left: 50%; /* changed from right */
+    transform: translate(-50%, -100%);
+    animation-name: show-toast;
+    animation-duration: 5s;
+}
