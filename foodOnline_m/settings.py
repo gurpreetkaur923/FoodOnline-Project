@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts',
     'vendor',
+    'menu',
 ]
 
 MIDDLEWARE = [
@@ -157,4 +158,5 @@ DEFAULT_FROM_EMAIL = 'foodOnline Marketplace <django.foodonline90@gmail.com>'
 
 
 
-GOOGLE_API_KEY = config('GOOGLE_API_KEY')
+# GOOGLE_API_KEY = config('GOOGLE_API_KEY')
+GOOGLE_API_KEY = config('GOOGLE_API_KEY', default='')
