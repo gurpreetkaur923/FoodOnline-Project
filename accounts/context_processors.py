@@ -9,7 +9,7 @@ def get_vendor(request):
        vendor = Vendor.objects.get(user=request.user)
     except:
         vendor = None
-        return dict(vendor=vendor)
+    return dict(vendor=vendor)
 
 def get_user_profile(request):
     try:
