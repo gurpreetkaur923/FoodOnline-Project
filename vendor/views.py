@@ -1,3 +1,4 @@
+
 from unicodedata import category
 from urllib import response
 from django.http import HttpResponse, JsonResponse
@@ -5,7 +6,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.db import IntegrityError
 
 from menu.forms import CategoryForm, FoodItemForm
-
+from orders.models import Order, OrderedFood
 import vendor
 from .forms import VendorForm, OpeningHourForm
 from accounts.forms import UserProfileForm
@@ -260,3 +261,13 @@ def order_detail(request, order_number):
     except:
         return redirect('vendor')
     return render(request, 'vendor/order_detail.html', context)
+
+
+def my_orders(request):
+    vendor = Vendor.objects.get(user=request.user)
+    orders = Order.objects.filter(vendors__in=[vendor.id], is_ordered=True).order_by('created_at')
+
+    context = {
+        'orders': orders,
+    }
+    return render(request, 'vendor/my_orders.html', context)
