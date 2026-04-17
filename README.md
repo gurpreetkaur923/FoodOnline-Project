@@ -6,17 +6,17 @@ A full-stack, production-style restaurant marketplace built with Django, simulat
 
 This platform enables:
 
-. Vendors to register and manage restaurants & menus
-. Customers to browse, search, and order food
-. Admins to control approvals and platform operations
+- Vendors to register and manage restaurants & menus
+- Customers to browse, search, and order food
+-  Admins to control approvals and platform operations
 
 It includes real-world features such as:
 
-. Multi-vendor system
-. Dynamic cart & checkout
-. Location-based search
-. Payment gateway integration
-. Order lifecycle management
+- Multi-vendor system
+- Dynamic cart & checkout
+- Location-based search
+- Payment gateway integration
+- Order lifecycle management
 
 # 🧠 Key Highlights
 
