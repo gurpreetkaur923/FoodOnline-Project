@@ -1,8 +1,8 @@
-🍽️ Django Restaurant Marketplace Platform
+# 🍽️ Django Restaurant Marketplace Platform #
 
 A full-stack, production-style restaurant marketplace built with Django, simulating real-world platforms like food delivery and vendor aggregation systems. This project goes beyond CRUD and demonstrates scalable architecture, advanced backend logic, payment integration, and geolocation-based discovery.
 
-🚀 Overview
+# 🚀 Overview
 
 This platform enables:
 
