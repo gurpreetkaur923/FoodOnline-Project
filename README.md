@@ -6,33 +6,35 @@ A full-stack, production-style restaurant marketplace built with Django, simulat
 
 This platform enables:
 
-Vendors to register and manage restaurants & menus
-Customers to browse, search, and order food
-Admins to control approvals and platform operations
+. Vendors to register and manage restaurants & menus
+. Customers to browse, search, and order food
+. Admins to control approvals and platform operations
 
 It includes real-world features such as:
 
-Multi-vendor system
-Dynamic cart & checkout
-Location-based search
-Payment gateway integration
-Order lifecycle management
-🧠 Key Highlights
-🔐 Custom authentication system with role-based access (Customer, Vendor, Admin)
-📍 Location-aware restaurant discovery (Google Autocomplete + geolocation)
-🛒 Dynamic cart with AJAX-powered updates
-💳 Integrated payments (PayPal & Razorpay)
-📦 Order lifecycle tracking with unique order numbers
-📊 Vendor dashboards with revenue analytics
-⏱ Dynamic business hours & tax calculation modules
-⚡ Optimized UX with asynchronous requests (AJAX)
-🏗️ Tech Stack
+. Multi-vendor system
+. Dynamic cart & checkout
+. Location-based search
+. Payment gateway integration
+. Order lifecycle management
 
-Backend
+# 🧠 Key Highlights
 
-Django
-Django REST principles (modular apps)
-PostgreSQL
+. 🔐 Custom authentication system with role-based access (Customer, Vendor, Admin)
+. 📍 Location-aware restaurant discovery (Google Autocomplete + geolocation)
+. 🛒 Dynamic cart with AJAX-powered updates
+. 💳 Integrated payments (PayPal & Razorpay)
+. 📦 Order lifecycle tracking with unique order numbers
+. 📊 Vendor dashboards with revenue analytics
+. ⏱ Dynamic business hours & tax calculation modules
+. ⚡ Optimized UX with asynchronous requests (AJAX)
+. 🏗️ Tech Stack
+
+# Backend
+
+. Django
+. Django REST principles (modular apps)
+. PostgreSQL
 
 Frontend
 
