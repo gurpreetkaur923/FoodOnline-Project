@@ -101,11 +101,7 @@ Deployed on a Virtual Private Server (Linode) with:
 - Gunicorn
 - Nginx
 - PostgreSQL
-# Static & media file configuration
-
-
-(Add screenshots here to significantly boost recruiter interest)
-
+  
 # 🎯 What This Project Demonstrates
 - Ability to design scalable Django architectures
 - Handling real-world business logic
