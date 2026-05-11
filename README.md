@@ -102,7 +102,7 @@ Deployed on a Virtual Private Server (Linode) with:
 - Nginx
 - PostgreSQL
 # Static & media file configuration
-# 📸 Screenshots
+
 
 (Add screenshots here to significantly boost recruiter interest)
 
