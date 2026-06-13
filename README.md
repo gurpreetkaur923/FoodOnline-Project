@@ -102,10 +102,12 @@ Deployed on a Virtual Private Server (Linode) with:
 - Nginx
 - PostgreSQL
   
-# 🎯 What This Project Demonstrates
-- Ability to design scalable Django architectures
-- Handling real-world business logic
-- Working with third-party APIs & payment systems
-- Building multi-role platforms
-- Implementing asynchronous frontend interactions
-- Understanding of deployment & production environments
+#  Screenshots
+## 🏠 Home Page
+![Home](img/home.png)
+
+## 🔐 Login Page
+![Login](img/sign.png)
+
+## 🛒 Cart Page
+![Cart](img/cart.png)
