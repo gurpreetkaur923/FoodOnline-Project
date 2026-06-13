@@ -1,14 +1,12 @@
-
-
-import json
-
-from django.shortcuts import render,get_object_or_404, redirect
+from django.shortcuts import get_object_or_404, redirect, render
 from django.contrib.auth.decorators import login_required
 from accounts.forms import UserInfoForm, UserProfileForm
 from accounts.models import UserProfile
+from django.contrib import messages
 from orders.models import Order, OrderedFood
+import simplejson as json
 
-# Create your views here.
+
 @login_required(login_url='login')
 def cprofile(request):
     profile = get_object_or_404(UserProfile, user=request.user)
@@ -34,6 +32,7 @@ def cprofile(request):
     }
     return render(request, 'customers/cprofile.html', context)
 
+
 def my_orders(request):
     orders = Order.objects.filter(user=request.user, is_ordered=True).order_by('-created_at')
 
@@ -41,6 +40,7 @@ def my_orders(request):
         'orders': orders,
     }
     return render(request, 'customers/my_orders.html', context)
+
 
 def order_detail(request, order_number):
     try:
@@ -59,3 +59,4 @@ def order_detail(request, order_number):
         return render(request, 'customers/order_detail.html', context)
     except:
         return redirect('customer')
+    

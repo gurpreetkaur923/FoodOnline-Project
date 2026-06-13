@@ -1,4 +1,3 @@
-
 from unicodedata import category
 from urllib import response
 from django.http import HttpResponse, JsonResponse

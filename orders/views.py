@@ -8,7 +8,7 @@ from marketplace.models import Cart, Tax
 from menu.models import FoodItem
 from orders.forms import OrderForm
 from orders.models import Order, OrderedFood, Payment
-from orders.utils import generate_order_number
+from orders.utils import generate_order_number, order_total_by_vendor
 from accounts.utils import send_notification
 from django.contrib.auth.decorators import login_required
 from django.contrib.sites.shortcuts import get_current_site

@@ -178,7 +178,7 @@ def custDashboard(request):
         'orders_count': orders.count(),
         'recent_orders': recent_orders,
     }
-    return render(request, 'accounts/custDashboard.html')
+    return render(request, 'accounts/custDashboard.html', context)
 
 @login_required(login_url='login')
 @user_passes_test(check_role_vendor)

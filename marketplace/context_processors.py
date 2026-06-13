@@ -1,4 +1,6 @@
 
+from foodOnline_m import settings
+
 from .models import Cart,Tax
 from menu.models import FoodItem
 
@@ -39,3 +41,6 @@ def get_cart_amounts(request):
         tax = sum(x for key in tax_dict.values() for x in key.values())
         grand_total = subtotal + tax
     return dict(subtotal=subtotal, tax=tax, grand_total=grand_total, tax_dict=tax_dict)
+
+def get_paypal_client_id(request):
+    return {'PAYPAL_CLIENT_ID': settings.PAYPAL_CLIENT_ID}

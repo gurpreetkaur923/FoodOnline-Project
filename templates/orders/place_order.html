@@ -64,7 +64,7 @@
                                                     <td><img src="{{ item.fooditem.image.url }}" width="40" alt="Food Image"></td>
                                                     <td><b>{{ item.fooditem }}</b></td>
                                                     <td>{{ item.quantity }}</td>
-                                                    <td>£{{ item.fooditem.price }}</td>
+                                                    <td>${{ item.fooditem.price }}</td>
                                                 </tr>
                                                 {% endfor %}
                                             </tbody>
@@ -74,7 +74,7 @@
                                             <li style="list-style-type: none;">
                                                 Subtotal
                                                 <span class="price float-right">
-                                                    <span class="currency">£</span>
+                                                    <span class="currency">$</span>
                                                     <span id="subtotal">{{ subtotal }}</span>
                                                 </span>
                                             </li>
@@ -84,7 +84,7 @@
                                                     <li style="list-style-type: none;">
                                                         {{ key }} <small>({{ i }}%)</small>
                                                         <span class="price float-right">
-                                                            <span class="currency">£</span>
+                                                            <span class="currency">$</span>
                                                             <span id="tax-{{ key }}">{{ j }}</span>
                                                         </span>
                                                     </li>
@@ -95,7 +95,7 @@
                                             <li style="list-style-type: none; font-weight: 600;">
                                                 TOTAL
                                                 <span class="price float-right">
-                                                    <span class="currency">£</span>
+                                                    <span class="currency">$</span>
                                                     <span id="total">{{ grand_total }}</span>
                                                 </span>
                                             </li>
@@ -144,12 +144,11 @@
     }
     
 
-    var grand_total = "{{ grand_total}}"
-    
-    {% comment %} var url = "{% url 'payments' %}" {% endcomment %}
+    var grand_total = "{{ grand_total }}"
+    var url = "{% url 'payments' %}"
     var order_number = "{{ order.order_number }}"
     const csrftoken = getCookie('csrftoken');
-    {% comment %} var order_complete = "{% url 'order_complete' %}" {% endcomment %}
+    var order_complete = "{% url 'order_complete' %}"
     console.log('csrftoken===>', csrftoken)
     // Render the PayPal button into #paypal-button-container
     paypal.Buttons({
@@ -157,14 +156,9 @@
         // Set up the transaction
         createOrder: function(data, actions) {
             return actions.order.create({
-                intent: "CAPTURE",
-                application_context: {
-                    shipping_preference: "NO_SHIPPING"
-                },
                 purchase_units: [{
                     amount: {
-                        currency_code: "GBP", 
-                        value: parseFloat(grand_total).toFixed(2)
+                        value: grand_total
                     }
                 }]
             });
@@ -193,7 +187,7 @@
 
     }).render('#paypal-button-container');
 
-    // RazorPay Payment Gateway
+    {% comment %} // RazorPay Payment Gateway
     var options = {
             "key": "{{ RZP_KEY_ID }}", // Enter the Key ID generated from the Dashboard
             "amount": "{{ rzp_amount }}", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -242,7 +236,7 @@
         rzp1.open();
         e.preventDefault();
     }
-    // RazorPay Payment Gateway
+    // RazorPay Payment Gateway {% endcomment %}
 
 
     // Send the data to payments view to store in the database
